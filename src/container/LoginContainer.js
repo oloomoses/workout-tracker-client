@@ -1,8 +1,9 @@
 import React from 'react';
+import Login from '../components/Login';
 
 const LoginContainer = () => (
   <div>
-    <h3>Login</h3>
+    <Login />
   </div>
 );
 

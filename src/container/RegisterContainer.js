@@ -1,8 +1,9 @@
 import React from 'react';
+import Register from '../components/Register';
 
 const RegisterContainer = () => (
   <div>
-    <h3>Register</h3>
+    <Register />
   </div>
 );
 
