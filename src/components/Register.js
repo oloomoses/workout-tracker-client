@@ -1,35 +1,60 @@
-import React from 'react';
+/* eslint-disable camelcase */
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Form, Button } from 'react-bootstrap';
 
-const Register = () => (
-  <div>
-    <h3>Register</h3>
-    <Form>
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label>Username</Form.Label>
-        <Form.Control type="text" placeholder="Enter username" />
-      </Form.Group>
+const Register = ({ submission }) => {
+  const [username, setUsername] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [confirm_password, setConfirm_password] = useState();
 
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-      </Form.Group>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const userData = {
+      username,
+      email,
+      password,
+      confirm_password,
 
-      <Form.Group controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
+    };
+    submission(userData);
+  };
 
-      <Form.Group controlId="formBasicPassword">
-        <Form.Label>Confirm Password</Form.Label>
-        <Form.Control type="password" placeholder="Confirm Password" />
-      </Form.Group>
+  return (
+    <div>
+      <h3>Register</h3>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Username</Form.Label>
+          <Form.Control type="text" placeholder="Enter username" name="username" onChange={(e) => setUsername(e.target.value)} />
+        </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Register
-      </Button>
-    </Form>
-  </div>
-);
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Confirm Password</Form.Label>
+          <Form.Control type="password" placeholder="Confirm Password" onChange={(e) => setConfirm_password(e.target.value)} />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Register
+        </Button>
+      </Form>
+    </div>
+  );
+};
+
+Register.propTypes = {
+  submission: PropTypes.func.isRequired,
+};
 
 export default Register;
