@@ -23,7 +23,7 @@ const Register = ({ submission }) => {
 
   return (
     <div>
-      <h3>Register</h3>
+      <h3 className="text-center my-3">Register</h3>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Username</Form.Label>

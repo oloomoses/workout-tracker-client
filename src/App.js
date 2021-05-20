@@ -1,21 +1,23 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
 import LoginContainer from './container/LoginContainer';
 import RegisterContainer from './container/RegisterContainer';
 import WorkoutContainer from './container/WorkoutContainer';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <Container>
+    <div>
       <Router>
+        <Navigation />
+
         <Switch>
-          <Route path="/login" component={LoginContainer} />
-          <Route path="/register" component={RegisterContainer} />
-          <Route path="/workouts" component={WorkoutContainer} />
+          <Route exact path="/login" component={LoginContainer} />
+          <Route exact path="/register" component={RegisterContainer} />
+          <Route exact path="/workouts" component={WorkoutContainer} />
         </Switch>
       </Router>
-    </Container>
+    </div>
   );
 }
 
