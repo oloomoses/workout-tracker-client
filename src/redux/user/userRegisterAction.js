@@ -22,7 +22,11 @@ export const registerFailure = (error) => ({
 export const userRegister = (data) => async (dispatch) => {
   const url = 'https://afternoon-castle-24666.herokuapp.com/register';
   dispatch(registerRequest());
-  const result = await axios.post(url, data);
+  try {
+    const result = await axios.post(url, data);
 
-  dispatch(result.data);
+    dispatch(registerSuccess(result.data));
+  } catch (error) {
+    dispatch(registerFailure(error));
+  }
 };

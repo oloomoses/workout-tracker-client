@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Form, Button } from 'react-bootstrap';
 
 const Register = ({ submission }) => {
-  const [username, setUsername] = useState();
+  const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [confirm_password, setConfirm_password] = useState();
@@ -12,7 +12,7 @@ const Register = ({ submission }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const userData = {
-      username,
+      name,
       email,
       password,
       confirm_password,
@@ -27,7 +27,7 @@ const Register = ({ submission }) => {
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="text" placeholder="Enter username" name="username" onChange={(e) => setUsername(e.target.value)} />
+          <Form.Control type="text" placeholder="Enter username" name="username" onChange={(e) => setName(e.target.value)} />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
