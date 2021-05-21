@@ -7,8 +7,8 @@ import {
 const initialState = {
   loading: false,
   user: {},
-  token: localStorage.getItem('auth_token'),
-  username: localStorage.getItem('workoutUser'),
+  token: localStorage.getItem('token'),
+  message: '',
   error: '',
 };
 
@@ -25,8 +25,8 @@ const userRegistrationReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         user: action.payload,
-        token: localStorage.setItem('auth_token', action.payload.token),
-        username: localStorage.setItem('workoutUser', action.payload.name),
+        token: localStorage.setItem('token', action.payload.auth_token),
+        message: action.payload.message,
       };
 
     case REGISTER_FAILURE:

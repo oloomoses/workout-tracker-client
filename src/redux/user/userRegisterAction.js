@@ -19,13 +19,18 @@ export const registerFailure = (error) => ({
   payload: error,
 });
 
-export const userRegister = (data) => async (dispatch) => {
-  const url = 'https://afternoon-castle-24666.herokuapp.com/register';
+export const userRegister = (userData) => async (dispatch) => {
+  const urlData = 'https://afternoon-castle-24666.herokuapp.com/signup';
   dispatch(registerRequest());
-  try {
-    const result = await axios.post(url, data);
+  const axiosConfig = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
 
-    dispatch(registerSuccess(result.data));
+  try {
+    const res = await axios.post(urlData, userData, axiosConfig.headers);
+    dispatch(registerSuccess(res.data));
   } catch (error) {
     dispatch(registerFailure(error));
   }

@@ -7,7 +7,7 @@ const Register = ({ submission }) => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [confirm_password, setConfirm_password] = useState();
+  const [password_confirmation, setConfirm_password] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const Register = ({ submission }) => {
       name,
       email,
       password,
-      confirm_password,
+      password_confirmation,
 
     };
     submission(userData);
