@@ -1,9 +1,7 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import LoginContainer from './container/LoginContainer';
-import RegisterContainer from './container/RegisterContainer';
-import WorkoutContainer from './container/WorkoutContainer';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Navigation from './components/Navigation';
+import Main from './components/Main';
 
 function App() {
   return (
@@ -11,11 +9,7 @@ function App() {
       <Router>
         <Navigation />
 
-        <Switch>
-          <Route exact path="/login" component={LoginContainer} />
-          <Route exact path="/signup" component={RegisterContainer} />
-          <Route exact path="/workouts" component={WorkoutContainer} />
-        </Switch>
+        <Main />
       </Router>
     </div>
   );

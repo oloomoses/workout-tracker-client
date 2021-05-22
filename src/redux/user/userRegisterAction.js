@@ -31,6 +31,7 @@ export const userRegister = (userData) => async (dispatch) => {
   try {
     const res = await axios.post(urlData, userData, axiosConfig.headers);
     dispatch(registerSuccess(res.data));
+    window.location.href = '/';
   } catch (error) {
     dispatch(registerFailure(error));
   }
