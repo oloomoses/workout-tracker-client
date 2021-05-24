@@ -7,7 +7,7 @@ import {
 const initialState = {
   loading: false,
   user: {},
-  token: localStorage.getItem('token'),
+  token: sessionStorage.getItem('token'),
   message: '',
   error: '',
 };
@@ -25,7 +25,7 @@ const userRegistrationReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         user: action.payload,
-        token: localStorage.setItem('token', action.payload.auth_token),
+        token: sessionStorage.setItem('token', action.payload.auth_token),
         message: action.payload.message,
       };
 
