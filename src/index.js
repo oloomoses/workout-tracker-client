@@ -7,7 +7,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import store from './redux/store';
 
-axios.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('CarRentalsToken')}`;
+axios.defaults.headers.common.Authorization = `Bearer ${sessionStorage.getItem('token')}`;
 
 ReactDOM.render(
   <React.StrictMode>

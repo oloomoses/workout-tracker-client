@@ -21,10 +21,15 @@ export const getWorkoutFailure = (error) => ({
 
 export const workouts = () => async (dispatch) => {
   const url = 'https://afternoon-castle-24666.herokuapp.com/workouts';
+  const axiosConfig = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
   dispatch(getWorkoutRequest);
 
   try {
-    const res = await axios.get(url, { mode: 'cors' });
+    const res = await axios.get(url, axiosConfig.headers);
     console.log(res.data);
   } catch (error) {
     dispatch(getWorkoutFailure);
