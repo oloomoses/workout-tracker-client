@@ -12,7 +12,7 @@ const initialState = {
   error: '',
 };
 
-const userRegistrationReducer = (state = initialState, action) => {
+const userRegisterReducer = (state = initialState, action) => {
   switch (action.type) {
     case REGISTER_REQUEST:
       return {
@@ -41,4 +41,4 @@ const userRegistrationReducer = (state = initialState, action) => {
   }
 };
 
-export default userRegistrationReducer;
+export default userRegisterReducer;

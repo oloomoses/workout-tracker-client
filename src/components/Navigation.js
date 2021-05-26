@@ -6,7 +6,7 @@ import {
 } from 'react-bootstrap';
 
 const Navigation = () => {
-  const token = useSelector((state) => state.token);
+  const token = useSelector((state) => state.signup.token);
   return (
     <div>
       <Navbar className="bg-custom justify-content-between">

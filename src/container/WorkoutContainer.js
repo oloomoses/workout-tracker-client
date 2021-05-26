@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-const WorkoutContainer = () => (
-  <div>
-    <h3>Workouts</h3>
-  </div>
-);
+const WorkoutContainer = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch();
+  }, []);
+
+  return (
+    <div>
+      <h3>Workouts</h3>
+    </div>
+  );
+};
 
 export default WorkoutContainer;

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
-import { userRegister } from '../redux/user/userRegisterAction';
+import { userRegister } from '../redux/actions';
 
 const RegisterContainer = () => {
   const dispatch = useDispatch();

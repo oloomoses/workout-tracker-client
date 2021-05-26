@@ -8,8 +8,8 @@ import WorkoutContainer from '../container/WorkoutContainer';
 import Spinner from './Spinner';
 
 const Main = () => {
-  const token = useSelector((state) => state.token);
-  const loading = useSelector((state) => state.loading);
+  const token = useSelector((state) => state.signup.token || state.login.token);
+  const loading = useSelector((state) => state.signup.loading || state.login.loading);
 
   if (loading) {
     return <Spinner />;
