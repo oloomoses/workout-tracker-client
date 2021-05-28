@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import { Container, Form, Button } from 'react-bootstrap';
 import { userRegister } from '../redux/actions';
 
 const RegisterContainer = () => {
@@ -24,7 +24,7 @@ const RegisterContainer = () => {
   };
 
   return (
-    <div>
+    <Container fluid>
       <h3 className="text-center my-3">Register</h3>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail">
@@ -47,11 +47,11 @@ const RegisterContainer = () => {
           <Form.Control type="password" placeholder="Confirm Password" onChange={(e) => setConfirm_password(e.target.value)} />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="text-center">
           Register
         </Button>
       </Form>
-    </div>
+    </Container>
   );
 };
 

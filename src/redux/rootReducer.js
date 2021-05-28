@@ -6,7 +6,7 @@ import workoutReducer from './workout/workoutReducer';
 const rootReducer = combineReducers({
   login: userLoginReducer,
   signup: userRegisterReducer,
-  workouts: workoutReducer,
+  workout: workoutReducer,
 });
 
 export default rootReducer;

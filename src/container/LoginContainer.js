@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import { Container, Form, Button } from 'react-bootstrap';
 import { userLogin } from '../redux/actions';
 
 const LoginContainer = () => {
@@ -18,7 +18,7 @@ const LoginContainer = () => {
   };
 
   return (
-    <div>
+    <Container fluid>
       <h3 className="text-center my-3">Login</h3>
       <Form onSubmit={handleLogin}>
         <Form.Group controlId="formBasicEmail">
@@ -30,11 +30,11 @@ const LoginContainer = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="text-center">
           Login
         </Button>
       </Form>
-    </div>
+    </Container>
   );
 };
 

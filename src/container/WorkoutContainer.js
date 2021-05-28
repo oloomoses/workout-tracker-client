@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { workouts } from '../redux/actions';
+import Workouts from '../components/Workouts';
 
 const WorkoutContainer = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const WorkoutContainer = () => {
 
   return (
     <div>
-      <h3>Workouts</h3>
+      <Workouts />
     </div>
   );
 };

@@ -26,12 +26,12 @@ export const workouts = () => async (dispatch) => {
       'Content-Type': 'application/json',
     },
   };
-  dispatch(getWorkoutRequest);
+  dispatch(getWorkoutRequest());
 
   try {
     const res = await axios.get(url, axiosConfig.headers);
-    console.log(res.data);
+    dispatch(getWorkoutSuccess(res.data));
   } catch (error) {
-    dispatch(getWorkoutFailure);
+    dispatch(getWorkoutFailure(error));
   }
 };

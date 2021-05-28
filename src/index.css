@@ -21,3 +21,25 @@ code {
 .nav-link {
   color: #fff !important;
 }
+
+.workouts-wrapper {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.workouts-wrapper .workout-card-layout {
+  padding: 1rem 0.5rem;
+  margin-top: 2rem;
+  height: 5rem;
+  width: 48%;
+  font-size: 0.7rem;
+  font-weight: bolder;
+  color: gray;
+}
+
+.trackIt-count {
+  font-size: 1.3rem;
+  color: #706f6f;
+}
