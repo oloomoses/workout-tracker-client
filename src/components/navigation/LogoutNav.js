@@ -1,24 +1,22 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import {
   Navbar, Nav, Button,
 } from 'react-bootstrap';
 
 const LogoutNav = () => {
-  const logout = (token) => token;
+  const logout = () => {
+    sessionStorage.removeItem('token');
+    window.location.href = '/login';
+  };
 
   return (
     <Navbar className="d-flex flex-column">
       <Nav className="ml-auto">
-        <li className="nav-item">
-          <Button className="nav-link" onClick={logout}>Log Out</Button>
-        </li>
+        <Button onClick={logout}>Log Out</Button>
       </Nav>
 
       <Nav className="mx-auto">
-        <li className="nav-item">
-          <div className="brand">Track.It</div>
-        </li>
+        <div className="brand">Track.It</div>
       </Nav>
     </Navbar>
   );
