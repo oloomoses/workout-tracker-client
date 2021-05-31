@@ -47,9 +47,11 @@ const RegisterContainer = () => {
           <Form.Control type="password" placeholder="Confirm Password" onChange={(e) => setConfirm_password(e.target.value)} />
         </Form.Group>
 
-        <Button variant="primary" type="submit" className="text-center">
-          Register
-        </Button>
+        <Form.Group className="text-center">
+          <Button variant="primary" type="submit" className="">
+            Register
+          </Button>
+        </Form.Group>
       </Form>
     </Container>
   );

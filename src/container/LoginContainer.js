@@ -30,9 +30,11 @@ const LoginContainer = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
         </Form.Group>
-        <Button variant="primary" type="submit" className="text-center">
-          Login
-        </Button>
+        <Form.Group className="text-center">
+          <Button variant="primary" type="submit" className="">
+            Login
+          </Button>
+        </Form.Group>
       </Form>
     </Container>
   );
