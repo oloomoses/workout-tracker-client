@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Container, Card } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Spinner from './Spinner';
 
 const Workouts = () => {
@@ -16,7 +17,7 @@ const Workouts = () => {
         { workouts.map((workout) => (
           <Card key={workout.id} className="workout-card-layout">
             <div className="d-flex justify-content-between">
-              <div><img src={workout.icon} alt="icon" /></div>
+              <div><FontAwesomeIcon icon={workout.icon} size="4x" /></div>
 
               <div>
                 <div>{workout.name}</div>

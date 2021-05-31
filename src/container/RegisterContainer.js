@@ -29,22 +29,22 @@ const RegisterContainer = () => {
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="text" placeholder="Enter username" name="username" onChange={(e) => setName(e.target.value)} />
+          <Form.Control type="text" placeholder="Enter username" name="username" required onChange={(e) => setName(e.target.value)} />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
+          <Form.Control type="email" placeholder="Enter email" required onChange={(e) => setEmail(e.target.value)} />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+          <Form.Control type="password" placeholder="Password" required onChange={(e) => setPassword(e.target.value)} />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Confirm Password</Form.Label>
-          <Form.Control type="password" placeholder="Confirm Password" onChange={(e) => setConfirm_password(e.target.value)} />
+          <Form.Control type="password" placeholder="Confirm Password" required onChange={(e) => setConfirm_password(e.target.value)} />
         </Form.Group>
 
         <Form.Group className="text-center">
