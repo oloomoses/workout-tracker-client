@@ -13,9 +13,8 @@ const WorkoutContainer = () => {
 
   return (
     <div>
-      <div className="text-center">
-        Date :
-        {date.toString()}
+      <div className="text-center mt-3">
+        <strong>{date.toDateString()}</strong>
       </div>
       <Workouts />
     </div>
