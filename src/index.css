@@ -13,13 +13,20 @@ code {
 }
 
 .bg-custom {
+  width: 100%;
   background-color: #62B5E5;
+  font-size: small;
   height: 6rem;
   font-weight: bold;
 }
 
 .nav-link {
   color: #fff !important;
+}
+
+.brand {
+  font-size: x-large;
+  color: #fff;
 }
 
 .workouts-wrapper {
@@ -45,5 +52,7 @@ code {
 
 .footer-custom {
   height: 4rem;
-  background-color: #67899C;
+  background-color: #445966;
+  color: #fff;
+  font-size: smaller;
 }

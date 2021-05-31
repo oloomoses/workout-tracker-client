@@ -1,9 +1,32 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => (
-  <div className="fixed-bottom footer-custom align-items-center">
-    <Container fluid>Footer</Container>
+  <div className="fixed-bottom footer-custom">
+    <Container fluid>
+      <div className="d-flex justify-content-between mt-2">
+        <div className="d-flex flex-column align-items-center">
+          <FontAwesomeIcon icon="chart-bar" size="2x" color="white" />
+          <>Workouts</>
+        </div>
+
+        <div className="d-flex flex-column align-items-center">
+          <FontAwesomeIcon icon="bolt" size="2x" color="white" />
+          <>TrackIts</>
+        </div>
+
+        <div className="d-flex flex-column align-items-center">
+          <FontAwesomeIcon icon="chart-pie" color="white" size="2x" />
+          <>Progress</>
+        </div>
+
+        <div className="d-flex flex-column align-items-center">
+          <FontAwesomeIcon icon="ellipsis-h" color="white" size="2x" />
+          <>More</>
+        </div>
+      </div>
+    </Container>
   </div>
 );
 

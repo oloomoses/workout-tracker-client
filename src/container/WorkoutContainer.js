@@ -5,6 +5,7 @@ import Workouts from '../components/Workouts';
 
 const WorkoutContainer = () => {
   const dispatch = useDispatch();
+  const date = new Date();
 
   useEffect(() => {
     dispatch(workouts());
@@ -12,6 +13,10 @@ const WorkoutContainer = () => {
 
   return (
     <div>
+      <div className="text-center">
+        Date :
+        {date.toString()}
+      </div>
       <Workouts />
     </div>
   );
