@@ -48,3 +48,21 @@ export const trackIts = (id) => async (dispatch) => {
     dispatch(error);
   }
 };
+
+export const postTrackIt = (id, formData) => async (dispatch) => {
+  const url = `https://afternoon-castle-24666.herokuapp.com//workouts/${id}/track_its`;
+  const axiosConfig = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+  dispatch(setLoading());
+  console.log(formData);
+  try {
+    const res = await axios.post(url, formData, axiosConfig.headers);
+    // dispatch(getRequest(res.data));
+    console.log(res.data);
+  } catch (error) {
+    // console.log(error);
+  }
+};

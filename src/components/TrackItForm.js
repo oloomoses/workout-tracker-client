@@ -1,0 +1,45 @@
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { Container, Form, Button } from 'react-bootstrap';
+import { postTrackIt } from '../redux/actions';
+
+const TrackItForm = () => {
+  const dispatch = useDispatch();
+  const [time, setTime] = useState();
+  const [calories, setCalories] = useState();
+  const { id } = useParams();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = {
+      calories,
+      minutes_recorded: time,
+    };
+    dispatch(postTrackIt(id, formData));
+  };
+
+  return (
+    <Container fluid>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Time</Form.Label>
+          <Form.Control type="number" placeholder="Enter time recorded" name="username" required onChange={(e) => setTime(e.target.value)} />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Calories</Form.Label>
+          <Form.Control type="number" placeholder="Enter Calories burned" required onChange={(e) => setCalories(e.target.value)} />
+        </Form.Group>
+
+        <Form.Group className="text-center">
+          <Button variant="primary" type="submit" className="">
+            Submit
+          </Button>
+        </Form.Group>
+      </Form>
+    </Container>
+  );
+};
+
+export default TrackItForm;
