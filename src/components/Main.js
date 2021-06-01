@@ -6,6 +6,7 @@ import LoginContainer from '../container/LoginContainer';
 
 import WorkoutContainer from '../container/WorkoutContainer';
 import Spinner from './Spinner';
+import TrackitContainer from '../container/TrackitContainer';
 
 const Main = () => {
   const token = useSelector((state) => state.signup.token || state.login.token);
@@ -32,6 +33,15 @@ const Main = () => {
           !token
             ? <Redirect to="/login" />
             : <WorkoutContainer />
+        )}
+      />
+      <Route
+        exact
+        path="/workouts/:id"
+        render={() => (
+          !token
+            ? <Redirect to="/login" />
+            : <TrackitContainer />
         )}
       />
       <Route exact path="/login" component={LoginContainer} />

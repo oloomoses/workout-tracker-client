@@ -16,14 +16,16 @@ const Workouts = () => {
       <div className="workouts-wrapper">
         { workouts.map((workout) => (
           <Card key={workout.id} className="workout-card-layout">
-            <div className="d-flex justify-content-between">
-              <div><FontAwesomeIcon icon={workout.icon} size="4x" /></div>
+            <a href={`/workouts/${workout.id}`}>
+              <div className="d-flex justify-content-between">
+                <div><FontAwesomeIcon icon={workout.icon} size="4x" /></div>
 
-              <div>
-                <div>{workout.name}</div>
-                <div className="trackIt-count text-center">13</div>
+                <div>
+                  <div>{workout.name}</div>
+                  <div className="trackIt-count text-center">13</div>
+                </div>
               </div>
-            </div>
+            </a>
           </Card>
         ))}
       </div>

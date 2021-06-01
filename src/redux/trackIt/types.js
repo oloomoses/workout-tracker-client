@@ -1,0 +1,7 @@
+export const GET_REQUEST = 'GET_REQUEST';
+export const POST_REQUEST = 'POST_REQUEST';
+export const PUT_REQUEST = 'PUT_REQUEST';
+export const DELETE_REQUEST = 'DELETE_REQUEST';
+export const REQUEST_SUCCESS = 'REQUEST_SUCCESS';
+export const REQUEST_FAILURE = 'REQUEST_FAILURE';
+export const SET_LOADING = 'SET_LOADING';
