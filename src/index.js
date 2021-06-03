@@ -10,10 +10,8 @@ import store from './redux/store';
 axios.defaults.headers.common.Authorization = `Bearer ${sessionStorage.getItem('token')}`;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root'),
 );

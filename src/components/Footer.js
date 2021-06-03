@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const token = useSelector((state) => state.signup.token);
@@ -13,10 +14,12 @@ const Footer = () => {
     <div className="fixed-bottom footer-custom">
       <Container fluid>
         <div className="d-flex justify-content-between mt-2">
-          <div className="d-flex flex-column align-items-center">
+          <Link to="/workouts" className="d-flex flex-column align-items-center">
+
             <FontAwesomeIcon icon="chart-bar" size="2x" color="white" />
-            <>Workouts</>
-          </div>
+            <div className="footer-text">Workouts</div>
+
+          </Link>
 
           <div className="d-flex flex-column align-items-center">
             <FontAwesomeIcon icon="bolt" size="2x" color="white" />

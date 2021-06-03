@@ -56,3 +56,28 @@ code {
   color: #fff;
   font-size: smaller;
 }
+
+a,
+a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.footer-text {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-rounded {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50px !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.logout-btn {
+  background-color: transparent !important;
+  border: none !important;
+  font-weight: bolder !important;
+}

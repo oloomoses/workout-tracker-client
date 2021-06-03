@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
-import { postTrackIt } from '../redux/actions';
+import { postTrackIt } from '../../redux/actions';
 
 const TrackItForm = () => {
   const dispatch = useDispatch();
@@ -21,16 +21,22 @@ const TrackItForm = () => {
 
   return (
     <Container fluid>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Time</Form.Label>
-          <Form.Control type="number" placeholder="Enter time recorded" name="username" required onChange={(e) => setTime(e.target.value)} />
-        </Form.Group>
 
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Calories</Form.Label>
-          <Form.Control type="number" placeholder="Enter Calories burned" required onChange={(e) => setCalories(e.target.value)} />
-        </Form.Group>
+      <Form onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="col">
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>Time</Form.Label>
+              <Form.Control type="number" placeholder="Enter time recorded" name="username" required onChange={(e) => setTime(e.target.value)} />
+            </Form.Group>
+          </div>
+          <div className="col">
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>Calories</Form.Label>
+              <Form.Control type="number" placeholder="Enter Calories burned" required onChange={(e) => setCalories(e.target.value)} />
+            </Form.Group>
+          </div>
+        </div>
 
         <Form.Group className="text-center">
           <Button variant="primary" type="submit" className="">

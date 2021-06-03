@@ -12,7 +12,7 @@ const LogoutNav = () => {
   return (
     <Navbar className="d-flex flex-column">
       <Nav className="ml-auto">
-        <Button onClick={logout}>Log Out</Button>
+        <Button className="logout-btn" onClick={logout}>Log Out</Button>
       </Nav>
 
       <Nav className="mx-auto">

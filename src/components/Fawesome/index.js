@@ -12,6 +12,7 @@ import {
   faChartPie,
   faChartLine,
   faSkating,
+  faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -27,4 +28,5 @@ library.add(
   faChartPie,
   faChartLine,
   faSkating,
+  faPlus,
 );
