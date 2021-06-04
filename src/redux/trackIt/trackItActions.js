@@ -40,13 +40,8 @@ export const trackIts = (id) => async (dispatch) => {
   };
   dispatch(setLoading());
 
-  try {
-    const res = await axios.get(url, axiosConfig.headers);
-    // dispatch(getRequest(res.data));
-    console.log(res.data);
-  } catch (error) {
-    dispatch(error);
-  }
+  const res = await axios.get(url, axiosConfig.headers);
+  dispatch(getRequest(res.data));
 };
 
 export const postTrackIt = (id, formData) => async (dispatch) => {
@@ -57,12 +52,7 @@ export const postTrackIt = (id, formData) => async (dispatch) => {
     },
   };
   dispatch(setLoading());
-  console.log(formData);
-  try {
-    const res = await axios.post(url, formData, axiosConfig.headers);
-    // dispatch(getRequest(res.data));
-    console.log(res.data);
-  } catch (error) {
-    // console.log(error);
-  }
+
+  const res = await axios.post(url, formData, axiosConfig.headers);
+  dispatch(postRequest(res.data));
 };

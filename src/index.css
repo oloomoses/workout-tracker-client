@@ -45,9 +45,19 @@ code {
   color: gray;
 }
 
+.track-calories {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color: gray;
+}
+
+.track-date,
+.track-mins,
 .trackIt-count {
-  font-size: 1.3rem;
-  color: #706f6f;
+  font-size: 1rem;
+  color: #666464;
+  font-weight: bolder;
 }
 
 .footer-custom {
