@@ -22,7 +22,7 @@ const Workouts = () => {
 
                 <div>
                   <div>{workout.name}</div>
-                  <div className="trackIt-count text-center">13</div>
+                  <div className="trackIt-count text-center">{workout.track_its_count}</div>
                 </div>
               </div>
             </a>

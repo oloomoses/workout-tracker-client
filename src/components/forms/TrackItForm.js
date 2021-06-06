@@ -26,7 +26,7 @@ const TrackItForm = () => {
         <div className="row">
           <div className="col">
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Time</Form.Label>
+              <Form.Label>Recorded Time</Form.Label>
               <Form.Control type="number" placeholder="Enter time recorded" name="username" required onChange={(e) => setTime(e.target.value)} />
             </Form.Group>
           </div>

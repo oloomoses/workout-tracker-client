@@ -17,6 +17,10 @@ const TrackIts = () => {
     return toP.toString();
   };
 
+  if (trackIts.length < 1) {
+    return <h4 className="text-center">No tracked Session</h4>;
+  }
+
   return (
     <div className="tracks-wrapper">
       { trackIts.map((track) => (
