@@ -49,6 +49,7 @@ Components of this project is listed below;
 
 ## [Live Demo](https://agitated-heyrovsky-eb2953.netlify.app)
 
+## [Video Presentation](https://www.loom.com/share/0451a1e05e8a4190b14797b782a5220c)
 
 <!-- GETTING STARTED -->
 ## Getting Started
