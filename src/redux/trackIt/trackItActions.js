@@ -54,5 +54,6 @@ export const postTrackIt = (id, formData) => async (dispatch) => {
   dispatch(setLoading());
 
   const res = await axios.post(url, formData, axiosConfig.headers);
-  dispatch(postRequest(res.data));
+  dispatch(trackIts(res.data));
+  dispatch(trackIts(id));
 };
