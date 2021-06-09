@@ -26,14 +26,16 @@ const TrackItForm = () => {
         <div className="row">
           <div className="col">
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Recorded Time</Form.Label>
-              <Form.Control type="number" placeholder="Enter time recorded" name="username" required onChange={(e) => setTime(e.target.value)} />
+              <Form.Label>Recorded Time in minutes</Form.Label>
+              <Form.Control type="number" placeholder="Enter minutes recorded" name="username" required onChange={(e) => setTime(e.target.value)} />
+              <small id="emailHelp" className="form-text text-muted">Time in minutes</small>
             </Form.Group>
           </div>
           <div className="col">
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Calories</Form.Label>
-              <Form.Control type="number" placeholder="Enter Calories burned" required onChange={(e) => setCalories(e.target.value)} />
+              <Form.Label>Calories in kcals</Form.Label>
+              <Form.Control type="number" placeholder="Enter kcals burned" required onChange={(e) => setCalories(e.target.value)} />
+              <small id="emailHelp" className="form-text text-muted">Calories in kcals</small>
             </Form.Group>
           </div>
         </div>
