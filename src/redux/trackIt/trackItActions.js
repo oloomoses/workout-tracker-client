@@ -55,5 +55,5 @@ export const postTrackIt = (id, formData) => async (dispatch) => {
 
   const res = await axios.post(url, formData, axiosConfig.headers);
   dispatch(trackIts(res.data));
-  dispatch(trackIts(id));
+  window.location.href = `/workouts/${id}`;
 };
